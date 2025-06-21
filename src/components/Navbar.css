@@ -1,0 +1,92 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5f5dc;
+  font-family: 'Special Elite', monospace;
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.navbar-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.book-appointment-button {
+  background-color: #e94b3c;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0px black;
+  transition: all 0.2s ease-in-out;
+}
+
+.book-appointment-button:hover {
+  background-color: #c0392b;
+  box-shadow: 1px 1px 0px black;
+  transform: translate(2px, 2px);
+  text-decoration: none !important;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #f5f5dc;
+    border-top: 2px solid black;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .book-appointment-button {
+    margin: 1rem auto;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+} 

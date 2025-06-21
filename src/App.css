@@ -1,38 +1,144 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f5f5dc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  font-family: 'Special Elite', monospace;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid black;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.animated-bugs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bug {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12,2a1,1,0,0,0-1,1V5.42a5.5,5.5,0,0,0-4,5.08v4.33L4.4,16.5A1,1,0,0,0,4,18H8.33a3.5,3.5,0,0,0,6.34,0H19a1,1,0,0,0,.6-1.68L17,14.83V10.5A5.5,5.5,0,0,0,13,5.42V3a1,1,0,0,0-1-1Zm0,3a3.5,3.5,0,0,1,3.5,3.5v4.33L16,14H7l.5-1.17V10.5A3.5,3.5,0,0,1,12,5Z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: crawl 15s linear infinite;
+}
+
+.bug:nth-child(1) {
+  top: 10%;
+  left: -20px;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  transform: scale(0.8);
+}
+
+.bug:nth-child(2) {
+  top: 30%;
+  left: -20px;
+  animation-duration: 25s;
+  animation-delay: 5s;
+  transform: scale(1.2);
+}
+
+.bug:nth-child(3) {
+  top: 50%;
+  left: -20px;
+  animation-duration: 18s;
+  animation-delay: 10s;
+}
+
+.bug:nth-child(4) {
+  top: 70%;
+  left: -20px;
+  animation-duration: 22s;
+  animation-delay: 2s;
+  transform: scale(0.9);
+}
+
+.bug:nth-child(5) {
+  top: 90%;
+  left: -20px;
+  animation-duration: 28s;
+  animation-delay: 8s;
+  transform: scale(1.1);
+}
+
+.services-list {
+  font-family: sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+}
+
+.services-list ul {
+  list-style-type: '→';
+  padding-left: 2rem;
+}
+
+.services-list li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes crawl {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  20% {
+    transform: translateX(20vw) translateY(-10vh) rotate(15deg);
+  }
+  40% {
+    transform: translateX(40vw) translateY(5vh) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(60vw) translateY(-5vh) rotate(10deg);
+  }
+  80% {
+    transform: translateX(80vw) translateY(10vh) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(105vw) translateY(-2vh) rotate(5deg);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-list ul {
+    padding-left: 1rem;
   }
 }

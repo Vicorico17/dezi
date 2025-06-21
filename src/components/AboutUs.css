@@ -1,0 +1,49 @@
+.about-us-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-us-text {
+  flex: 1;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.certifications {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e94b3c;
+  color: white;
+  border: 2px solid black;
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+}
+
+.about-us-images {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.about-us-images img {
+  width: 50%;
+  border: 3px solid black;
+  padding: 5px;
+  background-color: #f5f5dc;
+  box-shadow: 4px 4px 0px #e94b3c;
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column;
+  }
+
+  .about-us-images {
+    flex-direction: column;
+  }
+
+  .about-us-images img {
+    width: 100%;
+  }
+} 
