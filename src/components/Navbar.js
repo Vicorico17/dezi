@@ -10,15 +10,26 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      <div className="navbar-section left">
+        <a href="#services">Servicii</a>
+        <a href="#about">Despre</a>
+      </div>
+
       <div className="navbar-brand">
         <img src="/dezi-logo.png" alt="DEZI Logo" className="navbar-logo" />
         DEZI
       </div>
+
+      <div className="navbar-section right">
+        <a href="#book" className="book-appointment-button">Programează o vizită</a>
+      </div>
+      
       <div className="menu-icon" onClick={toggleMenu}>
         <div />
         <div />
         <div />
       </div>
+
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <a href="#services">Servicii</a>
         <a href="#about">Despre</a>
